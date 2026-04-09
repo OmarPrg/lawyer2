@@ -13,6 +13,7 @@ this project is for crating a website for a lawyer firm   , and the language is 
  - tailwindcss
  - typescript
  - shadcn/ui
+ - framer-motion
  # mustfollow 
  this is the strucur of our project 
   - hero section

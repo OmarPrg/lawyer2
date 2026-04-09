@@ -1,4 +1,5 @@
 import React from 'react';
+import { FadeIn, SlideInLeft, SlideUp } from "@/components/ui/scroll-animations";
 
 export function Contact() {
   return (
@@ -6,19 +7,20 @@ export function Contact() {
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
+        <FadeIn className="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block py-1.5 px-6 rounded-full bg-white text-[#25395e] border border-[#e2e8f0] font-primary text-sm tracking-widest shadow-sm mb-4">
             تواصل معنا
           </span>
+          
           <h2 className="text-4xl md:text-5xl font-extrabold font-display leading-[1.2] text-[#1c0305] my-4">
             نحن هنا للاستماع إليك و<span className="text-transparent bg-clip-text bg-gradient-to-l from-[#25395e] to-[#4870bb]">مساعدتك</span>
           </h2>
           <p className="text-[#616161] font-primary text-lg leading-relaxed">
             لا تتردد في زيارة مكتبنا أو التواصل معنا لحجز استشارتك القانونية. فريقنا متواجد لخدمتك.
           </p>
-        </div>
+        </FadeIn>
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 bg-white rounded-3xl shadow-[0_20px_50px_rgba(37,57,94,0.05)] border border-[#e2e8f0] p-6 md:p-10 lg:p-14 overflow-hidden relative">
+        <SlideUp className="flex flex-col lg:flex-row gap-12 lg:gap-16 bg-white rounded-3xl shadow-[0_20px_50px_rgba(37,57,94,0.05)] border border-[#e2e8f0] p-6 md:p-10 lg:p-14 overflow-hidden relative">
           
           {/* Subtle Graphic background */}
           <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#4870bb]/5 rounded-full blur-3xl pointer-events-none" />
@@ -32,16 +34,19 @@ export function Contact() {
               </p>
             </div>
 
+            <SlideInLeft>
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#25395e]/5 flex items-center justify-center text-[#25395e] shrink-0 border border-[#25395e]/10">
                 <span className="material-symbols-outlined">location_on</span>
               </div>
-              <div>
-                <h4 className="font-display font-bold text-[#1c0305] mb-1">العنوان</h4>
-                <p className="font-primary text-[#616161] text-sm">شارع الملك فهد الفرعي، برج العليا التجاري، الدور الخامس، الرياض.</p>
-              </div>
+                <div>
+                   <h4 className="font-display font-bold text-[#1c0305] mb-1">العنوان</h4>
+                   <p className="font-primary text-[#616161] text-sm">شارع الملك فهد الفرعي، برج العليا التجاري، الدور الخامس، الرياض.</p>
+                </div>
             </div>
+              </SlideInLeft>
 
+            <SlideInLeft>
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#25395e]/5 flex items-center justify-center text-[#25395e] shrink-0 border border-[#25395e]/10">
                 <span className="material-symbols-outlined">call</span>
@@ -52,7 +57,9 @@ export function Contact() {
                 <p className="font-primary text-[#616161] text-sm font-semibold">+966 11 987 6543</p>
               </div>
             </div>
+              </SlideInLeft>
 
+            <SlideInLeft>
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#25395e]/5 flex items-center justify-center text-[#25395e] shrink-0 border border-[#25395e]/10">
                 <span className="material-symbols-outlined">mail</span>
@@ -62,7 +69,9 @@ export function Contact() {
                 <p className="font-primary text-[#616161] text-sm font-semibold">info@ezzeldin-law.com</p>
               </div>
             </div>
+              </SlideInLeft>
             
+              <SlideInLeft>
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#25395e]/5 flex items-center justify-center text-[#25395e] shrink-0 border border-[#25395e]/10">
                 <span className="material-symbols-outlined">schedule</span>
@@ -72,6 +81,7 @@ export function Contact() {
                 <p className="font-primary text-[#616161] text-sm">الأحد - الخميس: 9:00 صباحاً حتي 5:00 مساءً</p>
               </div>
             </div>
+              </SlideInLeft>
 
           </div>
 
@@ -90,7 +100,7 @@ export function Contact() {
              ></iframe>
           </div>
 
-        </div>
+        </SlideUp>
       </div>
     </section>
   );

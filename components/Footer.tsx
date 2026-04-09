@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { FadeIn, SlideInLeft } from "@/components/ui/scroll-animations";
 
 export function Footer() {
   return (
@@ -11,7 +12,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
           {/* Column 1: Brand & About */}
-          <div className="flex flex-col items-start w-full">
+          <SlideInLeft delay={0} className="flex flex-col items-start w-full">
             <Link href="#" className="flex items-center gap-2 mb-6 group w-full justify-start">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#4870bb] to-[#25395e] flex items-center justify-center text-white shadow-lg">
                 <span className="material-symbols-outlined text-[20px]">balance</span>
@@ -34,55 +35,77 @@ export function Footer() {
                 <span className="material-symbols-outlined text-[20px]">call</span>
               </a>
             </div>
-          </div>
+          </SlideInLeft>
 
           {/* Column 2: Quick Links */}
-          <div className="flex flex-col items-start w-full">
+          <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
             <h4 className="text-white font-display font-bold mb-6 text-lg">روابط سريعة</h4>
             <ul className="flex flex-col space-y-3 w-full text-right">
-              <li><Link href="#about" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">من نحن</Link></li>
-              <li><Link href="#services" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">خدماتنا القانونية</Link></li>
-              <li><Link href="#why-us" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">لماذا أختيارك لنا</Link></li>
-              <li><Link href="#testimonials" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">أراء وتجارب العملاء</Link></li>
+              <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
+                <li><Link href="#about" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">من نحن</Link></li>
+              </SlideInLeft>
+              <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
+                <li><Link href="#services" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">خدماتنا القانونية</Link></li>
+              </SlideInLeft>
+              <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
+                <li><Link href="#why-us" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">لماذا أختيارك لنا</Link></li>
+              </SlideInLeft>
+              <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
+                <li><Link href="#testimonials" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">أراء وتجارب العملاء</Link></li>
+              </SlideInLeft>
             </ul>
-          </div>
+          </SlideInLeft>
 
           {/* Column 3: Services */}
-          <div className="flex flex-col items-start w-full">
+          <SlideInLeft delay={0.4} className="flex flex-col items-start w-full">
             <h4 className="text-white font-display font-bold mb-6 text-lg">أبرز التخصصات</h4>
             <ul className="flex flex-col space-y-3 w-full text-right">
-              <li><Link href="#" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">القانون التجاري والشركات</Link></li>
-              <li><Link href="#" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">الدفاع الجنائي</Link></li>
-              <li><Link href="#" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">الأحوال الشخصية والأسرة</Link></li>
-              <li><Link href="#" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">قضايا العمل والعمال</Link></li>
+              <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
+                <li><Link href="#" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">القانون التجاري والشركات</Link></li>
+              </SlideInLeft>
+              <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
+                <li><Link href="#" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">الدفاع الجنائي</Link></li>
+              </SlideInLeft>
+              <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
+                <li><Link href="#" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">الأحوال الشخصية والأسرة</Link></li>
+              </SlideInLeft>
+              <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
+                <li><Link href="#" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">قضايا العمل والعمال</Link></li>
+              </SlideInLeft>
             </ul>
-          </div>
+          </SlideInLeft>
 
           {/* Column 4: Contact Info */}
-          <div className="flex flex-col items-start w-full">
+          <SlideInLeft delay={0.6} className="flex flex-col items-start w-full">
             <h4 className="text-white font-display font-bold mb-6 text-lg">معلومات التواصل</h4>
             <ul className="flex flex-col space-y-4 text-right">
-              <li className="flex items-start gap-3 justify-start">
-                <span className="material-symbols-outlined text-[#4870bb] text-[20px]">location_on</span>
-                <span className="text-[#a5a5aa] font-primary text-[13px] leading-relaxed max-w-xs">
-                  شارع الملك فهد الفرعي، برج العليا التجاري، الدور الخامس، الرياض.
-                </span>
-              </li>
-              <li className="flex items-center gap-3 justify-start">
-                <span className="material-symbols-outlined text-[#4870bb] text-[20px]">call</span>
-                <span className="text-[#a5a5aa] font-primary text-sm font-semibold" dir="ltr">+966 50 123 4567</span>
-              </li>
-              <li className="flex items-center gap-3 justify-start">
-                <span className="material-symbols-outlined text-[#4870bb] text-[20px]">mail</span>
-                <span className="text-[#a5a5aa] font-primary text-sm">info@ezzeldin-law.com</span>
-              </li>
+              <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
+                <li className="flex items-start gap-3 justify-start">
+                  <span className="material-symbols-outlined text-[#4870bb] text-[20px]">location_on</span>
+                  <span className="text-[#a5a5aa] font-primary text-[13px] leading-relaxed max-w-xs">
+                    شارع الملك فهد الفرعي، برج العليا التجاري، الدور الخامس، الرياض.
+                  </span>
+                </li>
+              </SlideInLeft>
+              <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
+                <li className="flex items-center gap-3 justify-start">
+                  <span className="material-symbols-outlined text-[#4870bb] text-[20px]">call</span>
+                  <span className="text-[#a5a5aa] font-primary text-sm font-semibold" dir="ltr">+966 50 123 4567</span>
+                </li>
+              </SlideInLeft>
+              <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
+                <li className="flex items-center gap-3 justify-start">
+                  <span className="material-symbols-outlined text-[#4870bb] text-[20px]">mail</span>
+                  <span className="text-[#a5a5aa] font-primary text-sm">info@ezzeldin-law.com</span>
+                </li>
+              </SlideInLeft>
             </ul>
-          </div>
+          </SlideInLeft>
 
         </div>
 
         {/* Copyright Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <FadeIn className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[#616161] font-primary text-sm text-center md:text-right">
             جميع الحقوق محفوظة لمكتب عزالدين عمر للمحاماة والاستشارات القانونية &copy; {new Date().getFullYear()}
           </p>
@@ -90,7 +113,7 @@ export function Footer() {
             <Link href="#" className="hover:text-[#a5a5aa] transition-colors">سياسة الخصوصية</Link>
             <Link href="#" className="hover:text-[#a5a5aa] transition-colors">الشروط والأحكام</Link>
           </p>
-        </div>
+        </FadeIn>
       </div>
     </footer>
   );
