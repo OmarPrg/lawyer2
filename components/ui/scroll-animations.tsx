@@ -41,8 +41,8 @@ export const FadeIn = ({ children, className = "", delay = 0 }: AnimationProps) 
 export const SlideUp = ({ children, className = "", delay = 0 }: AnimationProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0.5, y: 50, filter: "blur(1px)", scale: 0.96 }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)", scale: 1 }}
+      initial={{ y: 50, scale: 0.96 }}
+      whileInView={{  y: 0, scale: 1 }}
       viewport={VIEWPORT_CONFIG}
       transition={{ ...PREMIUM_SPRING, delay }}
       className={className}
@@ -55,8 +55,8 @@ export const SlideUp = ({ children, className = "", delay = 0 }: AnimationProps)
 export const SlideInLeft = ({ children, className = "", delay = 0 }: AnimationProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0.5, x: -50, filter: "blur(1px)" }}
-      whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+      initial={{ x: -50 }}
+      whileInView={{  x: 0 }}
       viewport={VIEWPORT_CONFIG}
       transition={{ ...PREMIUM_SPRING, delay }}
       className={className}
@@ -69,8 +69,8 @@ export const SlideInLeft = ({ children, className = "", delay = 0 }: AnimationPr
 export const SlideInRight = ({ children, className = "", delay = 0 }: AnimationProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 50, filter: "blur(1px)" }}
-      whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+      initial={{ x: 50 }}
+      whileInView={{  x: 0 }}
       viewport={VIEWPORT_CONFIG}
       transition={{ ...PREMIUM_SPRING, delay }}
       className={className}
@@ -106,8 +106,8 @@ export const StaggerItem = ({ children, className = "" }: { children: React.Reac
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 40, filter: "blur(8px)", scale: 0.95 },
-        show: { opacity: 1, y: 0, filter: "blur(0px)", scale: 1, transition: PREMIUM_SPRING },
+        hidden: {  y: 40, scale: 0.95 },
+        show: {  y: 0, scale: 1, transition: PREMIUM_SPRING },
       }}
       className={className}
     >
@@ -134,11 +134,9 @@ export const TextReveal = ({ text, className = "" }: { text: string; className?:
           key={i}
           className="inline-block mx-1 overflow-hidden"
           variants={{
-            hidden: { opacity: 0, y: 30, filter: "blur(6px)", rotateX: -30 },
+            hidden: { y: 30, rotateX: -30 },
             show: { 
-              opacity: 1, 
               y: 0, 
-              filter: "blur(0px)", 
               rotateX: 0,
               transition: PREMIUM_SPRING
             }
