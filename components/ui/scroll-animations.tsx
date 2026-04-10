@@ -27,7 +27,7 @@ const VIEWPORT_CONFIG = {
 export const FadeIn = ({ children, className = "", delay = 0 }: AnimationProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0.5, filter: "blur(6px)", scale: 0.98 }}
+      initial={{ opacity: 0.5, filter: "blur(1px)", scale: 0.98 }}
       whileInView={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
       viewport={VIEWPORT_CONFIG}
       transition={{ ...PREMIUM_SPRING, delay, duration: 1 }}
@@ -41,7 +41,7 @@ export const FadeIn = ({ children, className = "", delay = 0 }: AnimationProps) 
 export const SlideUp = ({ children, className = "", delay = 0 }: AnimationProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0.5, y: 50, filter: "blur(6px)", scale: 0.96 }}
+      initial={{ opacity: 0.5, y: 50, filter: "blur(1px)", scale: 0.96 }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)", scale: 1 }}
       viewport={VIEWPORT_CONFIG}
       transition={{ ...PREMIUM_SPRING, delay }}
@@ -55,7 +55,7 @@ export const SlideUp = ({ children, className = "", delay = 0 }: AnimationProps)
 export const SlideInLeft = ({ children, className = "", delay = 0 }: AnimationProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0.5, x: -50, filter: "blur(6px)" }}
+      initial={{ opacity: 0.5, x: -50, filter: "blur(1px)" }}
       whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
       viewport={VIEWPORT_CONFIG}
       transition={{ ...PREMIUM_SPRING, delay }}
@@ -69,7 +69,7 @@ export const SlideInLeft = ({ children, className = "", delay = 0 }: AnimationPr
 export const SlideInRight = ({ children, className = "", delay = 0 }: AnimationProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 50, filter: "blur(6px)" }}
+      initial={{ opacity: 0, x: 50, filter: "blur(1px)" }}
       whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
       viewport={VIEWPORT_CONFIG}
       transition={{ ...PREMIUM_SPRING, delay }}
