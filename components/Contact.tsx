@@ -89,7 +89,7 @@ export function Contact() {
           <div className="w-full lg:w-2/3 bg-[#f8fafc] border border-[#e2e8f0] rounded-2xl overflow-hidden h-[450px] md:h-auto min-h-[450px] relative shadow-inner">
              {/* Google Maps Embed (Placeholder targeting Riyadh) */}
              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d563.3935916712996!2d30.7520468301043!3d28.10659057580246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b24fc250efdd1%3A0x420aa944b9ab7365!2z2YLYtdixINir2YLYp9mB2Kkg2KfZhNmF2YbZitinLCBFbC1GYXRoLCBRaXNtIE1pbnlhLCBGaXJzdCBBbCBNaW55YSwgTWlueWEgR292ZXJub3JhdGUgMjQ1MTEzNQ!5e1!3m2!1sen!2seg!4v1775764723849!5m2!1sen!2seg" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1726.9802615096753!2d31.754727449618976!3d30.03799039486872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1457f3c8c51accb5%3A0x734626cd9e915ca0!2sPresidential%20Palace%20of%20Egypt!5e0!3m2!1sen!2seg!4v1775848937592!5m2!1sen!2seg" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

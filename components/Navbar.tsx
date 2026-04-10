@@ -21,11 +21,11 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'الرئيسية', href: '#home' },
-    { name: 'من نحن', href: '#about' },
-    { name: 'خدماتنا', href: '#services' },
-    { name: 'لماذا نحن', href: '#why-us' },
-    { name: 'آراء العملاء', href: '#testimonials' },
+    { name: 'الرئيسية', href: '/#home' },
+    { name: 'من نحن', href: '/#about' },
+    { name: 'خدماتنا', href: '/#services' },
+    { name: 'لماذا نحن', href: '/#why-us' },
+    { name: 'آراء العملاء', href: '/#testimonials' },
   ];
 
   return (

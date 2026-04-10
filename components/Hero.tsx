@@ -140,7 +140,7 @@ export function Hero() {
       </div>
 
       {/* Bottom overlay for blending into the next section */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent dark:from-[#131313] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-17 bg-gradient-to-t from-white to-transparent dark:from-[#131313] pointer-events-none" />
     </section>
   );
 }

@@ -18,7 +18,7 @@ this project is for crating a website for a lawyer firm   , and the language is 
  this is the strucur of our project 
   - hero section
   - about us 
-  - services
+  - services [ and each service has a page , that show the service details , and this page conain articles that show similar services done before  ]
   - why choose us
   - people comments 
   - contact
