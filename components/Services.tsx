@@ -59,6 +59,8 @@ export function Services() {
             </SlideUp>
           ))}
         </StaggerContainer>
+
+   
       </div>
     </section>
   );

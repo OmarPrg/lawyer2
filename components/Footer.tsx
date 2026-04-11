@@ -42,16 +42,16 @@ export function Footer() {
             <h4 className="text-white font-display font-bold mb-6 text-lg">روابط سريعة</h4>
             <ul className="flex flex-col space-y-3 w-full text-right">
               <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
-                <li><Link href="#about" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">من نحن</Link></li>
+                <li><Link href="/about" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">من نحن</Link></li>
               </SlideInLeft>
               <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
-                <li><Link href="#services" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">خدماتنا القانونية</Link></li>
+                <li><Link href="/#services" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">خدماتنا القانونية</Link></li>
               </SlideInLeft>
               <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
-                <li><Link href="#why-us" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">لماذا أختيارك لنا</Link></li>
+                <li><Link href="/about#why-us" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">لماذا أختيارك لنا</Link></li>
               </SlideInLeft>
               <SlideInLeft delay={0.2} className="flex flex-col items-start w-full">
-                <li><Link href="#testimonials" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">أراء وتجارب العملاء</Link></li>
+                <li><Link href="/#testimonials" className="text-[#a5a5aa] hover:text-[#b9c7e4] font-primary text-sm transition-colors">أراء وتجارب العملاء</Link></li>
               </SlideInLeft>
             </ul>
           </SlideInLeft>

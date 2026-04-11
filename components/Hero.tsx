@@ -52,17 +52,17 @@ export function Hero() {
           </StaggerItem>
 
           <StaggerItem className="w-full">
-            <div className="pt-4 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-              <Link href="#contact" className="w-full sm:w-auto group relative px-8 py-3.5 sm:py-4 bg-[#4870bb] overflow-hidden rounded-xl font-display font-bold text-base sm:text-lg text-white shadow-[0_0_20px_rgba(72,112,187,0.3)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(72,112,187,0.5)] hover:-translate-y-1 block text-center">
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  طلب عرض
-                  <span className="material-symbols-outlined text-xl transition-transform duration-300 group-hover:-translate-x-1">
-                    arrow_back
+            <div className="pt-8 flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
+              <Link href="/contact" className="w-full sm:w-auto group relative px-10 py-5 bg-[#4870bb] overflow-hidden rounded-2xl font-display font-bold text-lg sm:text-xl text-white shadow-[0_20px_40px_rgba(72,112,187,0.3)] transition-all duration-500 hover:shadow-[0_25px_50px_rgba(72,112,187,0.5)] hover:-translate-y-2 block text-center min-w-[220px]">
+                <span className="relative z-10 flex items-center justify-center gap-3">
+                  ابدأ قضيتك الآن
+                  <span className="material-symbols-outlined text-2xl transition-transform duration-500 group-hover:-translate-x-2">
+                    trending_flat
                   </span>
                 </span>
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
               </Link>
-              <Link href="#services" className="w-full sm:w-auto px-8 py-3.5 sm:py-4 bg-transparent border border-white/20 hover:bg-white/5 hover:border-white/40 rounded-xl font-display font-semibold text-white transition-all duration-300 text-base sm:text-lg block text-center">
+              <Link href="/#services" className="w-full sm:w-auto px-10 py-5 bg-transparent border-2 border-white/10 hover:border-[#4870bb] hover:bg-white/5 rounded-2xl font-display font-bold text-white transition-all duration-500 text-lg sm:text-xl block text-center min-w-[220px]">
                 استكشف خدماتنا
               </Link>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { SlideUp, StaggerContainer, StaggerItem, AnimatedCounter, TextReveal } from "@/components/ui/scroll-animations";
+import Link from 'next/link';
 
 export function AboutUs() {
   const stats = [
@@ -21,37 +22,47 @@ export function AboutUs() {
 
           {/* Right Side: Text & Content */}
           <SlideUp className="flex-1 w-full space-y-8 text-right">
-            <div className="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-[#f1f5f9] border border-[#e2e8f0]">
-              <span className="w-2 h-2 rounded-full bg-[#25395e] animate-pulse"></span>
-              <span className="text-[#25395e] font-display font-bold text-sm tracking-widest">
-                من نحن
-              </span>
-            </div>
+            <div className="flex flex-col items-start text-right space-y-6">
+              {/* Shimmer Accent Line */}
+              <div className="w-40 h-[2px] bg-gradient-to-l from-transparent via-[#4870bb] to-transparent relative overflow-hidden group">
+                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              </div>
 
-            <h2 className="text-4xl lg:text-5xl font-extrabold font-display leading-[1.3] text-[#1c0305] text-right">
-              <TextReveal text="نحن نحمي حقوقك بصوت" />
-              <div className="mt-2">
-                <span className=" bg-clip-text bg-gradient-to-l from-[#25395e] to-[#4870bb]">
-                  <TextReveal text="العدالة والقانون" />
+              <div className="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-[#f1f5f9] border border-[#e2e8f0]">
+                <span className="w-2 h-2 rounded-full bg-[#25395e] animate-pulse"></span>
+                <span className="text-[#25395e] font-display font-bold text-sm tracking-widest uppercase">
+                  من نحن
                 </span>
               </div>
-            </h2>
 
-            <p className="text-lg md:text-xl font-primary text-[#616161] leading-relaxed border-r-4 border-[#4870bb] pr-5">
-              يعتبر مكتب المحامي عزالدين عمر صرحاً قانونياً رائداً يسعى دائماً لتقديم الأفضل لعملائه. نؤمن بأن كل قضية هي التزام، وكل استشارة هي أمانة.
-            </p>
+              <h2 className="text-4xl lg:text-5xl font-extrabold font-display leading-[1.3] text-[#1c0305] text-right">
+                <TextReveal text="نحن نحمي حقوقك بصوت" />
+                <div className="mt-2">
+                  <span className=" bg-clip-text bg-gradient-to-l from-[#25395e] to-[#4870bb]">
+                    <TextReveal text="العدالة والقانون" />
+                  </span>
+                </div>
+              </h2>
 
-            <p className="text-base md:text-lg font-primary text-[#616161]/80 leading-relaxed max-w-2xl">
-              تأسس مكتبنا على مبادئ النزاهة والاحترافية، حيث يضم نخبة من أفضل المحامين والمستشارين القانونيين الذين يمتلكون خبرة واسعة في مختلف التخصصات القانونية. نحن هنا لضمان تقديم حلول قانونية مبتكرة وفعالة تواكب تطلعات عملائنا وتحمي مصالحهم بكل السبل القانونية المتاحة.
-            </p>
+              <p className="text-lg md:text-xl font-primary text-[#616161] leading-relaxed border-r-4 border-[#4870bb] pr-5">
+                يعتبر مكتب المحامي عزالدين عمر صرحاً قانونياً رائداً يسعى دائماً لتقديم الأفضل لعملائه. نؤمن بأن كل قضية هي التزام، وكل استشارة هي أمانة.
+              </p>
 
-            <div className="pt-6">
-              <button className="group px-8 py-3.5 bg-white border-2 border-[#25395e] text-[#25395e] hover:bg-[#25395e] hover:text-white rounded-xl font-display font-bold text-lg transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-1 flex items-center gap-3">
-                اكتشف تاريخنا
-                <span className="material-symbols-outlined transform transition-transform group-hover:-translate-x-2">
-                  arrow_back
-                </span>
-              </button>
+              <p className="text-base md:text-lg font-primary text-[#616161]/80 leading-relaxed max-w-2xl">
+                تأسس مكتبنا على مبادئ النزاهة والاحترافية، حيث يضم نخبة من أفضل المحامين والمستشارين القانونيين الذين يمتلكون خبرة واسعة في مختلف التخصصات.
+              </p>
+
+              <div className="pt-8 w-full flex justify-start">
+                <Link 
+                  href="/about" 
+                  className="group px-10 py-4 bg-[#25395e] text-white hover:bg-[#4870bb] rounded-2xl font-display font-bold text-lg transition-all duration-500 shadow-xl hover:-translate-y-2 flex items-center gap-4"
+                >
+                  اكتشف تاريخنا الكامل
+                  <span className="material-symbols-outlined transform transition-transform group-hover:-translate-x-2">
+                    arrow_back
+                  </span>
+                </Link>
+              </div>
             </div>
           </SlideUp>
 

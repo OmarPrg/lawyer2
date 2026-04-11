@@ -15,6 +15,8 @@ this project is for crating a website for a lawyer firm   , and the language is 
  - shadcn/ui
  - framer-motion
  # mustfollow 
+ make the website responsive for all devices 
+ make pages ans sutiable .
  this is the strucur of our project 
   - hero section
   - about us 

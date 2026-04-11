@@ -1,11 +1,8 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { services } from '@/lib/services-data';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
-import { SlideUp, FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animations';
 import { CaseStudyDialog } from '@/components/CaseStudyDialog';
-import { SmoothScroll } from '@/components/ui/smooth-scroll';
+import { SlideUp, FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animations';
 import Link from 'next/link';
 
 export function generateStaticParams() {
@@ -23,9 +20,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
   }
 
   return (
-    <SmoothScroll>
-      <main className="min-h-screen bg-[#131313] text-white">
-        <Navbar />
+    <main className="min-h-screen bg-[#131313] text-white">
         
         {/* Hero Section */}
         <section className="relative pt-40 pb-20 overflow-hidden bg-[#131313]">
@@ -37,7 +32,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
               <nav className="flex items-center gap-2 text-sm text-[#a5a5aa] mb-8" dir="rtl">
                 <Link href="/" className="hover:text-white transition-colors">الرئيسية</Link>
                 <span className="material-symbols-outlined text-xs">chevron_left</span>
-                <span className="text-[#4870bb]">خدماتنا</span>
+                <Link href="/#services" className="hover:text-white transition-colors">خدماتنا</Link>
                 <span className="material-symbols-outlined text-xs">chevron_left</span>
                 <span className="text-white">{service.title}</span>
               </nav>
@@ -136,20 +131,20 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
         </section>
 
         {/* CTA */}
-        {/* <section className="py-20 bg-gradient-to-l from-[#25395e] to-[#4870bb] rounded-t-[50px] relative z-10">
+        <section className="py-20 bg-white border-t border-[#e2e8f0] relative z-10">
            <div className="container mx-auto px-6 text-center">
-              <h2 className="text-3xl md:text-5xl font-display font-extrabold mb-8 text-white">هل تحتاج إلى استشارة قانونية في هذا المجال؟</h2>
+              <h2 className="text-3xl md:text-5xl font-display font-extrabold mb-8 text-[#131313]">هل تحتاج إلى استشارة قانونية في هذا المجال؟</h2>
               <Link 
-                href="/#contact" 
-                className="px-12 py-5 bg-white text-[#25395e] hover:bg-black hover:text-white rounded-2xl font-display font-extrabold text-xl transition-all shadow-2xl inline-block"
+                href="/contact" 
+                className="px-12 py-5 bg-[#25395e] text-white hover:bg-[#4870bb] rounded-2xl font-display font-extrabold text-xl transition-all shadow-2xl inline-block"
               >
-                احجز موعدك الآن
+                تواصل معنا الآن
               </Link>
            </div>
-        </section> */}
+        </section>
 
-        <Footer />
       </main>
-    </SmoothScroll>
+  
+  
   );
 }
