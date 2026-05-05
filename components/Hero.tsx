@@ -53,7 +53,7 @@ export function Hero() {
 
           <StaggerItem className="w-full">
             <div className="pt-8 flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
-              <Link href="/contact" className="w-full sm:w-auto group relative px-10 py-5 bg-[#4870bb] overflow-hidden rounded-2xl font-display font-bold text-lg sm:text-xl text-white shadow-[0_20px_40px_rgba(72,112,187,0.3)] transition-all duration-500 hover:shadow-[0_25px_50px_rgba(72,112,187,0.5)] hover:-translate-y-2 block text-center min-w-[220px]">
+              <Link href="/contact" className="w-full sm:w-auto group relative px-10 py-5 bg-[#4870bb] overflow-hidden rounded-2xl font-display font-bold text-lg sm:text-xl text-white transition-all duration-500 hover:-translate-y-1 block text-center min-w-[220px]">
                 <span className="relative z-10 flex items-center justify-center gap-3">
                   ابدأ قضيتك الآن
                   <span className="material-symbols-outlined text-2xl transition-transform duration-500 group-hover:-translate-x-2">
@@ -62,7 +62,7 @@ export function Hero() {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
               </Link>
-              <Link href="/#services" className="w-full sm:w-auto px-10 py-5 bg-transparent border-2 border-white/10 hover:border-[#4870bb] hover:bg-white/5 rounded-2xl font-display font-bold text-white transition-all duration-500 text-lg sm:text-xl block text-center min-w-[220px]">
+              <Link href="/#services" className="w-full sm:w-auto px-10 py-5 bg-transparent border-2 border-white/10 hover:border-[#4870bb] hover:bg-white/5 hover:-translate-y-1  rounded-2xl font-display font-bold text-white transition-all duration-500 text-lg sm:text-xl block text-center min-w-[220px]">
                 استكشف خدماتنا
               </Link>
             </div>

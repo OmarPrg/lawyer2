@@ -36,10 +36,10 @@ export function AboutUs() {
               </div>
 
               <h2 className="text-4xl lg:text-5xl font-extrabold font-display leading-[1.3] text-[#1c0305] text-right">
-                <TextReveal text="نحن نحمي حقوقك بصوت" />
+              نحن نحمي حقوقك بصوت
                 <div className="mt-2">
                   <span className=" bg-clip-text bg-gradient-to-l from-[#25395e] to-[#4870bb]">
-                    <TextReveal text="العدالة والقانون" />
+                    العدالة والقانون
                   </span>
                 </div>
               </h2>

@@ -54,8 +54,9 @@ export function Preloader() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
               className="text-[#a5a5aa] font-primary text-sm md:text-base tracking-[0.2em] font-medium"
               dir="rtl"
-            >
-              للمحاماة والاستشارات القانونية
+            > 
+             المحامي أمام محاكم الجنايات - ماجستير في القانون
+              {/* للمحاماة والاستشارات القانونية */}
             </motion.div>
           </div>
           

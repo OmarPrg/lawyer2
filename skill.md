@@ -13,7 +13,6 @@ this project is for crating a website for a lawyer firm   , and the language is 
  - tailwindcss
  - typescript
  - shadcn/ui
- - framer-motion
  # mustfollow 
  make the website responsive for all devices 
  make pages ans sutiable .
@@ -36,7 +35,7 @@ Create practical, implementation-ready guidance that can be directly used by eng
 Gradient design style
 
 ## Style Foundations
-- Visual style: modern, playful
+- Visual style: modern, playful , luxurious , minimalist and simple 
 - Typography scale: 12/14/16/18/24/30/36 | Fonts: primary=Montserrat, display=cairo sans-serif | weights=100, 200, 300, 400, 500, 600, 700, 800, 900
 - Color palette: primary, secondary, neutral, success, warning, danger | Tokens: primary=#25395e, secondary=#4870bb, success=#16a34a, warning=#d97706, danger=#dc2626, surface=#f6f6f6,
 main text color = #616161 
