@@ -7,10 +7,10 @@ export function Footer() {
     <footer className="w-full bg-[#131313] border-t border-white/10 pt-16 pb-8 relative overflow-hidden">
       {/* Decorative Top Line */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#4870bb] to-transparent opacity-50"></div>
-      
+
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
+
           {/* Column 1: Brand & About */}
           <div className="flex flex-col items-start w-full">
             <Link href="#" className="flex items-center gap-2 mb-6 group w-full justify-start">
@@ -18,7 +18,7 @@ export function Footer() {
                 <span className="material-symbols-outlined text-[20px]">balance</span>
               </div>
               <span className="text-2xl font-display font-bold text-white tracking-wide transition-colors group-hover:text-[#b9c7e4]">
-                عزالدين عمر
+                شعبان عبد الناصر
               </span>
             </Link>
             <p className="text-[#a5a5aa] font-primary text-sm leading-relaxed mb-6 text-right w-full">
@@ -66,16 +66,16 @@ export function Footer() {
               <li className="flex items-start gap-3 justify-start">
                 <span className="material-symbols-outlined text-[#4870bb] text-[20px]">location_on</span>
                 <span className="text-[#a5a5aa] font-primary text-[13px] leading-relaxed max-w-xs">
-                  شارع الملك فهد الفرعي، برج العليا التجاري، الدور الخامس، الرياض.
+                  الدقهلية - المنصورة - طلخا - أمام مجمع المحاكم.
                 </span>
               </li>
               <li className="flex items-center gap-3 justify-start">
                 <span className="material-symbols-outlined text-[#4870bb] text-[20px]">call</span>
-                <span className="text-[#a5a5aa] font-primary text-sm font-semibold" dir="ltr">+966 50 123 4567</span>
+                <span className="text-[#a5a5aa] font-primary text-sm font-semibold" dir="ltr">+20 01018155874</span>
               </li>
               <li className="flex items-center gap-3 justify-start">
                 <span className="material-symbols-outlined text-[#4870bb] text-[20px]">mail</span>
-                <span className="text-[#a5a5aa] font-primary text-sm">info@ezzeldin-law.com</span>
+                <span className="text-[#a5a5aa] font-primary text-sm">shaban.law.office@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -85,7 +85,7 @@ export function Footer() {
         {/* Copyright Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[#616161] font-primary text-sm text-center md:text-right">
-            جميع الحقوق محفوظة لمكتب عزالدين عمر للمحاماة والاستشارات القانونية &copy; {new Date().getFullYear()}
+            جميع الحقوق محفوظة لمكتب الأستاذ شعبان عبد الناصر للمحاماة والاستشارات القانونية &copy; {new Date().getFullYear()}
           </p>
           <div className="text-[#616161] font-primary text-xs flex gap-4">
             <Link href="#" className="hover:text-[#a5a5aa] transition-colors">سياسة الخصوصية</Link>

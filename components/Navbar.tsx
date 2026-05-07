@@ -33,35 +33,34 @@ export function Navbar() {
 
   return (
     <>
-      <nav 
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-[#131313]/90 backdrop-blur-md shadow-lg py-4' 
-            : 'bg-transparent py-6'
-        }`}
+      <nav
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled
+          ? 'bg-[#131313]/90 backdrop-blur-md shadow-lg py-4'
+          : 'bg-transparent py-6'
+          }`}
       >
-        <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
-          
+        <div className="container mx-auto px-8 lg:px-12 flex items-center justify-between">
+
           {/* Logo / Brand Name */}
           <Link href="/" className="flex items-center gap-2 group z-50 relative">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#4870bb] to-[#25395e] flex items-center justify-center text-white shadow-lg">
-              <span className="material-symbols-outlined text-[20px]">balance</span>
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[#4870bb] to-[#25395e] flex items-center justify-center text-white shadow-lg">
+              <span className="material-symbols-outlined text-[16px] sm:text-[20px]">balance</span>
             </div>
-            <span className="text-2xl font-display font-bold text-white tracking-wide transition-colors group-hover:text-[#b9c7e4]">
-              عزالدين عمر
+            <span className="text-xl sm:text-2xl font-display font-bold text-white tracking-wide transition-colors group-hover:text-[#b9c7e4]">
+              شعبان عبد الناصر
             </span>
           </Link>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
-              <div 
-                key={link.name} 
+              <div
+                key={link.name}
                 className="relative group"
                 onMouseEnter={() => link.hasDropdown && setIsServicesOpen(true)}
                 onMouseLeave={() => link.hasDropdown && setIsServicesOpen(false)}
               >
-                <Link 
+                <Link
                   href={link.href}
                   className="flex items-center gap-1 font-primary text-[#e0e0e0] hover:text-[#4870bb] transition-colors font-semibold text-[15px] py-2"
                 >
@@ -108,14 +107,14 @@ export function Navbar() {
 
           {/* Call to Action & Mobile Menu Toggle */}
           <div className="flex items-center gap-4 z-50 relative">
-            <Link 
+            <Link
               href="/contact"
               className="hidden sm:flex px-6 py-2.5 bg-white text-[#25395e] hover:bg-[#4870bb] hover:text-white rounded-lg font-display font-bold transition-colors shadow-md border border-white/10"
             >
               اتصل بنا
             </Link>
-            
-            <button 
+
+            <button
               className="lg:hidden text-white flex items-center justify-center"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -130,7 +129,7 @@ export function Navbar() {
       {/* Mobile Menu Overlay - Premium Redesign */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -142,9 +141,9 @@ export function Navbar() {
             <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[40%] bg-[#25395e]/10 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="flex flex-col h-full pt-32 pb-10 px-8 overflow-y-auto">
-              
+
               {/* Navigation Links with Staggered Entrance */}
-              <motion.div 
+              <motion.div
                 initial="hidden"
                 animate="show"
                 variants={{
@@ -160,7 +159,7 @@ export function Navbar() {
                 className="flex flex-col space-y-2 mb-12"
               >
                 {navLinks.map((link) => (
-                  <motion.div 
+                  <motion.div
                     key={link.name}
                     variants={{
                       hidden: { opacity: 0, x: 20 },
@@ -169,7 +168,7 @@ export function Navbar() {
                   >
                     {link.hasDropdown ? (
                       <div className="flex flex-col">
-                        <button 
+                        <button
                           onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                           className="flex items-center justify-between w-full py-4 text-right group"
                         >
@@ -180,18 +179,18 @@ export function Navbar() {
                             expand_more
                           </span>
                         </button>
-                        
+
                         <AnimatePresence>
                           {isMobileServicesOpen && (
-                            <motion.div 
+                            <motion.div
                               initial={{ height: 0, opacity: 0 }}
                               animate={{ height: 'auto', opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
                               className="flex flex-col space-y-4 pr-6 pb-6 overflow-hidden border-r-2 border-[#4870bb]/20 mr-2"
                             >
                               {services.map((service) => (
-                                <Link 
-                                  key={service.id} 
+                                <Link
+                                  key={service.id}
                                   href={`/services/${service.id}`}
                                   onClick={() => setIsMobileMenuOpen(false)}
                                   className="flex items-center gap-3 text-lg font-primary text-[#a5a5aa] hover:text-white transition-colors"
@@ -205,7 +204,7 @@ export function Navbar() {
                         </AnimatePresence>
                       </div>
                     ) : (
-                      <Link 
+                      <Link
                         href={link.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block py-4 text-3xl font-display font-black text-white hover:text-[#4870bb] transition-colors uppercase tracking-tight"
@@ -216,9 +215,9 @@ export function Navbar() {
                   </motion.div>
                 ))}
               </motion.div>
-              
+
               <div className="mt-auto">
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
@@ -226,15 +225,15 @@ export function Navbar() {
                 >
                   {/* Quick Contact Actions */}
                   <div className="grid grid-cols-2 gap-4">
-                    <a 
-                      href="tel:+966501234567"
+                    <a
+                      href="tel:+2001018155874"
                       className="flex items-center justify-center gap-2 py-4 bg-white/5 border border-white/10 rounded-2xl text-white font-primary font-bold hover:bg-[#4870bb] transition-all"
                     >
                       <span className="material-symbols-outlined text-lg">call</span>
                       اتصال
                     </a>
-                    <a 
-                      href="https://wa.me/966119876543"
+                    <a
+                      href="https://wa.me/2001018155874"
                       target="_blank"
                       className="flex items-center justify-center gap-2 py-4 bg-[#25d366]/10 border border-[#25d366]/20 rounded-2xl text-[#25d366] font-primary font-bold hover:bg-[#25d366] hover:text-white transition-all"
                     >
@@ -252,9 +251,9 @@ export function Navbar() {
                         { icon: 'facebook', href: '#', label: 'Facebook' },
                         { icon: 'send', href: '#', label: 'Telegram' }
                       ].map((social, i) => (
-                        <Link 
-                          key={i} 
-                          href={social.href} 
+                        <Link
+                          key={i}
+                          href={social.href}
                           className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-[#4870bb] hover:border-[#4870bb] transition-all"
                         >
                           <span className="material-symbols-outlined text-xl">{social.icon}</span>
@@ -262,7 +261,7 @@ export function Navbar() {
                       ))}
                     </div>
                     <p className="text-[#a5a5aa] font-primary text-xs uppercase tracking-[0.2em] opacity-50">
-                      عزالدين عمر للمحاماة &copy; {new Date().getFullYear()}
+                      شعبان عبد الناصر للمحاماة &copy; {new Date().getFullYear()}
                     </p>
                   </div>
                 </motion.div>

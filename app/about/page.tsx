@@ -3,6 +3,7 @@
 import React from 'react';
 import { AboutUs } from "@/components/AboutUs";
 import { WhyUs } from "@/components/WhyUs";
+import { MissionVisionValues } from "@/components/MissionVisionValues";
 import { FadeIn, SlideUp, StaggerContainer, StaggerItem, TextReveal } from "@/components/ui/scroll-animations";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -12,12 +13,23 @@ export default function AboutPage() {
     <div className="flex flex-col w-full bg-white overflow-hidden">
       {/* Page Hero - Premium Look */}
       <section className="relative pt-44 pb-32 bg-[#131313] overflow-hidden">
-        {/* Decorative Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#25395e] to-[#131313] opacity-60" />
-        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#4870bb] blur-[180px] opacity-15" />
-        <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/assets/heroBackground.webp.webp" 
+            alt="Background" 
+            fill 
+            className="object-cover opacity-60 grayscale brightness-[0.5]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#131313]/80 via-[#131313]/40 to-[#131313]/80 z-10" />
+          <div className="absolute inset-0 bg-[#25395e]/10 z-10" />
+        </div>
 
-        <div className="container mx-auto px-6 lg:px-12 relative z-10 text-right">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#4870bb] blur-[180px] opacity-15 z-10" />
+        <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-10" />
+
+        <div className="container mx-auto px-6 lg:px-12 relative z-20 text-right">
           <FadeIn>
             <nav className="flex items-center justify-start gap-2 text-sm text-[#a5a5aa] mb-8" dir="rtl">
               <Link href="/" className="hover:text-white transition-colors">الرئيسية</Link>
@@ -66,7 +78,7 @@ export default function AboutPage() {
                 <div className="relative pr-8 overflow-hidden group/para">
                   <div className="absolute right-0 top-0 w-1 h-full bg-[#4870bb] rounded-full origin-top transition-transform duration-500 group-hover/para:scale-y-110" />
                   <p>
-                    تأسس مكتب عزالدين عمر للمحاماة في عام <span className="text-[#4870bb] font-bold">٢٠٠٥</span> كفكرة طموحة تهدف إلى إرساء معايير جديدة للعدالة والتمثيل القانوني في المنطقة. بدأنا كمكتب صغير بوسط مدينة <span className="text-[#4870bb] font-bold">الرياض</span>، مدفوعين بشغف لا ينضب لـ <span className="text-[#4870bb] font-bold">حماية حقوق الأفراد والشركات</span>.
+                    تأسس مكتب الأستاذ شعبان عبد الناصر للمحاماة في عام <span className="text-[#4870bb] font-bold">٢٠٠٥</span> كفكرة طموحة تهدف إلى إرساء معايير جديدة للعدالة والتمثيل القانوني في المنطقة. بدأنا كمكتب صغير بمدينة <span className="text-[#4870bb] font-bold">المنصورة</span>، مدفوعين بشغف لا ينضب لـ <span className="text-[#4870bb] font-bold">حماية حقوق الأفراد والشركات</span>.
                   </p>
                 </div>
 
@@ -143,22 +155,23 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-gradient-to-l from-[#25395e]/20 to-transparent" />
 
             <div className="flex-1 relative z-10 text-right space-y-8 md:pr-12">
-              <span className="text-[#4870bb] font-display font-bold text-sm tracking-widest uppercase">مؤسس المكتب</span>
-              <h2 className="text-4xl md:text-6xl font-display font-extrabold text-white">المحامي عزالدين عمر</h2>
+              <span className="text-[#4870bb] font-display font-bold text-lg tracking-widest uppercase">مؤسس المكتب</span>
+              <h2 className="text-4xl md:text-6xl font-display font-extrabold text-white">المحامي شعبان عبد الناصر</h2>
               <p className="text-xl text-white/70 font-primary leading-relaxed max-w-2xl">
                 "رسالتنا ليست مجرد كسب القضايا، بل ترسيخ مبادئ العدالة وضمان أن يحصل كل صاحب حق على حقه بكل عزة وكرامة. نحن هنا لنكون صوتكم الحق في وجه التحديات."
               </p>
-              <div className="flex flex-wrap gap-4 items-center justify-end">
-                <div className="px-6 py-2 rounded-full border border-white/10 bg-white/5 text-white/80 font-primary text-sm">عضو الجمعية الدولية للمحامين</div>
-                <div className="px-6 py-2 rounded-full border border-white/10 bg-white/5 text-white/80 font-primary text-sm">مستشار قانوني معتمد</div>
+              <div className="flex flex-wrap gap-4 items-center justify-start">
+                <div className="px-6 py-3 rounded-xl border border-[#4870bb]/30 bg-[#4870bb]/10 text-white font-primary text-base shadow-[0_0_15px_rgba(72,112,187,0.1)]">ماجستير في القانون العام</div>
+                <div className="px-6 py-3 rounded-xl border border-white/10 bg-white/5 text-white/80 font-primary text-base">محامٍ مقيد لدى محكمة النقض والدستورية العليا</div>
+                <div className="px-6 py-3 rounded-xl border border-white/10 bg-white/5 text-white/80 font-primary text-base">خبير في المنازعات الجنائية والمدنية</div>
               </div>
             </div>
 
             <div className="flex-1 mt-12 md:mt-0 relative flex justify-center scale-x-[-1]">
               <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full border-2 border-[#4870bb]/30 overflow-hidden">
                 <Image
-                  src="/assets/lawyerImage.webp.webp"
-                  alt="Ezzeldin Omar"
+                  src="/assets/lawyer2.webp"
+                  alt="Shaban Abdelnasser"
                   fill
                   className="object-cover object-top filter contrast-[1.1] grayscale hover:grayscale-0 transition-all duration-700"
                 />
@@ -172,66 +185,8 @@ export default function AboutPage() {
       {/* <div className="py-12 bg-white">
         <AboutUs />
       </div> */}
-      {/* Architectural Prestige Mission & Vision (v3) */}
-      <section className="relative py-32 overflow-hidden bg-[#131313]">
-        {/* Background Image with Heavy Sophisticated Overlay */}
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/assets/heroBackground.webp.webp" 
-            alt="Architectural Depth" 
-            fill 
-            className="object-cover opacity-10 grayscale brightness-50"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#131313] via-[#131313]/95 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-l from-[#131313] via-transparent to-[#131313]" />
-        </div>
-
-        <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:items-center">
-            
-            {/* Vision Narrative */}
-            <SlideUp>
-              <div className="relative text-right group">
-                 <div className="flex items-center justify-start gap-6 mb-10" dir="rtl">
-                    <span className="text-5xl font-display font-black text-[#4870bb]/20 tracking-tighter group-hover:text-[#4870bb]/40 transition-colors">01</span>
-                    <div className="h-[2px] w-20 bg-gradient-to-l from-transparent to-[#4870bb] opacity-50 transition-all group-hover:w-32 group-hover:opacity-100" />
-                 </div>
-                 
-                 <div className="flex flex-col items-start pr-4 text-right">
-                    <div className="w-16 h-16 rounded-full border border-[#4870bb]/30 flex items-center justify-center text-[#4870bb] mb-8 group-hover:bg-[#4870bb] group-hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(72,112,187,0.2)]">
-                       <span className="material-symbols-outlined text-3xl">visibility</span>
-                    </div>
-                    <h3 className="text-4xl md:text-5xl font-display font-extrabold text-white mb-8 tracking-wide">رؤيتنا</h3>
-                    <p className="text-xl md:text-2xl text-white/70 font-primary leading-relaxed max-w-xl">
-                      نطمح لأن نكون <span className="text-[#4870bb] font-bold">المرجع الأول</span> والأكثر موثوقية، متميزين بالابتكار والالتزام بالعدالة المطلقة في كل خطوة نخطوها.
-                    </p>
-                 </div>
-              </div>
-            </SlideUp>
-
-            {/* Mission Narrative */}
-            <SlideUp delay={0.2}>
-              <div className="relative text-right group mt-20 lg:mt-0">
-                 <div className="flex items-center justify-start gap-6 mb-10" dir="rtl">
-                    <span className="text-5xl font-display font-black text-[#25395e]/40 tracking-tighter group-hover:text-[#25395e]/60 transition-colors">02</span>
-                    <div className="h-[2px] w-20 bg-gradient-to-l from-transparent to-[#25395e] opacity-50 transition-all group-hover:w-32 group-hover:opacity-100" />
-                 </div>
-                 
-                 <div className="flex flex-col items-start pr-4 text-right">
-                    <div className="w-16 h-16 rounded-full border border-[#25395e]/30 flex items-center justify-center text-[#25395e] mb-8 group-hover:bg-[#25395e] group-hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(37,57,94,0.2)]">
-                       <span className="material-symbols-outlined text-3xl">flag</span>
-                    </div>
-                    <h3 className="text-4xl md:text-5xl font-display font-extrabold text-white mb-8 tracking-wide">رسالتنا</h3>
-                    <p className="text-xl md:text-2xl text-white/70 font-primary leading-relaxed max-w-xl">
-                      نلتزم بتقديم <span className="text-[#25395e] font-bold">تمثيل قانوني استثنائي</span> يحمي مصالح موكلينا، ويساهم في بناء بيئة عدالة حقيقية ومستدامة.
-                    </p>
-                 </div>
-              </div>
-            </SlideUp>
-
-          </div>
-        </div>
-      </section>
+      {/* Mission, Vision & Values Section - Replaces CTA */}
+      <MissionVisionValues />
     </div>
   );
 }

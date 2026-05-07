@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Cairo, Montserrat } from "next/font/google";
+import { Almarai } from "next/font/google";
 import "./globals.css";
 
-const cairo = Cairo({ subsets: ["latin", "arabic"], variable: "--font-display" });
-const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-primary" });
+const almarai = Almarai({
+  subsets: ["arabic"],
+  weight: ["300", "400", "700", "800"],
+  variable: "--font-almarai",
+});
 
 export const metadata: Metadata = {
   title: "مكتب المحامي | Lawyer Firm",
@@ -24,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={`${cairo.variable} ${montserrat.variable} antialiased scroll-smooth`}>
+    <html lang="ar" dir="rtl" className={`${almarai.variable} antialiased scroll-smooth`}>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"

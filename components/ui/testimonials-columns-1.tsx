@@ -33,7 +33,7 @@ export const TestimonialsColumn = (props: {
           ...new Array(2).fill(0).map((_, index) => (
             <React.Fragment key={index}>
               {props.testimonials.map(({ content, name, role, rating }, i) => (
-                <div 
+                <div
                   key={i}
                   className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm relative group w-full min-w-[300px] max-w-sm hover:-translate-y-1 transition-transform duration-300"
                 >
@@ -41,7 +41,7 @@ export const TestimonialsColumn = (props: {
                   <span className="material-symbols-outlined absolute top-4 left-4 text-7xl text-white/5 pointer-events-none group-hover:text-[#4870bb]/20 transition-colors duration-500 transform rotate-180">
                     format_quote
                   </span>
-                  
+
                   {/* Star Rating */}
                   <div className="flex gap-1 mb-6 text-[#e9c176]">
                     {[...Array(rating)].map((_, rIndex) => (

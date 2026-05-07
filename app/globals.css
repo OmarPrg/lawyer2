@@ -18,8 +18,8 @@
   --color-background: #ffffff;
 
   /* Fonts */
-  --font-primary: "Montserrat", sans-serif;
-  --font-display: "Cairo", sans-serif;
+  --font-primary: var(--font-almarai), sans-serif;
+  --font-display: var(--font-almarai), sans-serif;
 
   /* Base radii */
   --radius-DEFAULT: 0.5rem;
@@ -58,9 +58,15 @@
     background-color: var(--background);
     color: var(--foreground);
     font-family: var(--font-primary);
-    @apply antialiased;
+    @apply antialiased overflow-x-hidden;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
     color: var(--color-primary);
   }

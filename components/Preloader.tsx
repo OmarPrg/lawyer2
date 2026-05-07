@@ -36,7 +36,7 @@ export function Preloader() {
               className="text-4xl md:text-5xl lg:text-6xl text-white font-display font-extrabold tracking-wider"
               dir="rtl"
             >
-              عزالدين عمر
+              شعبان عبد الناصر
             </motion.h1>
 
             {/* Glowing / Expanding Divider Line */}

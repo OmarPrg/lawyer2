@@ -3,7 +3,7 @@ import { Services } from "@/components/Services";
 import { FadeIn } from "@/components/ui/scroll-animations";
 
 export const metadata = {
-  title: "خدماتنا القانونية | مكتب عزالدين عمر للمحاماة",
+  title: "خدماتنا القانونية | مكتب شعبان عبد الناصر للمحاماة",
   description: "استكشف خدماتنا القانونية الشاملة والمتخصصة المصممة لحماية حقوقك وتعزيز مصالحك.",
 };
 

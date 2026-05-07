@@ -11,9 +11,9 @@ interface AnimationProps {
 
 // Balanced Spring config for premium feel without jitters
 const PREMIUM_SPRING = {
-  type: "spring" as const, 
-  stiffness: 80, 
-  damping: 20, 
+  type: "spring" as const,
+  stiffness: 80,
+  damping: 20,
   mass: 1.1,
 };
 
@@ -42,7 +42,7 @@ export const SlideUp = ({ children, className = "", delay = 0 }: AnimationProps)
   return (
     <motion.div
       initial={{ y: 50, scale: 0.96 }}
-      whileInView={{  y: 0, scale: 1 }}
+      whileInView={{ y: 0, scale: 1 }}
       viewport={VIEWPORT_CONFIG}
       transition={{ ...PREMIUM_SPRING, delay }}
       className={className}
@@ -56,7 +56,7 @@ export const SlideInLeft = ({ children, className = "", delay = 0 }: AnimationPr
   return (
     <motion.div
       initial={{ x: -50 }}
-      whileInView={{  x: 0 }}
+      whileInView={{ x: 0 }}
       viewport={VIEWPORT_CONFIG}
       transition={{ ...PREMIUM_SPRING, delay }}
       className={className}
@@ -70,7 +70,7 @@ export const SlideInRight = ({ children, className = "", delay = 0 }: AnimationP
   return (
     <motion.div
       initial={{ x: 50 }}
-      whileInView={{  x: 0 }}
+      whileInView={{ x: 0 }}
       viewport={VIEWPORT_CONFIG}
       transition={{ ...PREMIUM_SPRING, delay }}
       className={className}
@@ -106,8 +106,8 @@ export const StaggerItem = ({ children, className = "" }: { children: React.Reac
   return (
     <motion.div
       variants={{
-        hidden: {  y: 40, scale: 0.95 },
-        show: {  y: 0, scale: 1, transition: PREMIUM_SPRING },
+        hidden: { y: 40, scale: 0.95 },
+        show: { y: 0, scale: 1, transition: PREMIUM_SPRING },
       }}
       className={className}
     >
@@ -135,8 +135,8 @@ export const TextReveal = ({ text, className = "" }: { text: string; className?:
           className="inline-block mx-1 overflow-hidden"
           variants={{
             hidden: { y: 30, rotateX: -30 },
-            show: { 
-              y: 0, 
+            show: {
+              y: 0,
               rotateX: 0,
               transition: PREMIUM_SPRING
             }
@@ -159,10 +159,10 @@ const toArabicNumerals = (num: number) => {
 
 export const AnimatedCounter = ({ from = 0, to, duration = 2.5, prefix = "", suffix = "", className = "" }: { from?: number; to: number; duration?: number; prefix?: string; suffix?: string; className?: string }) => {
   const nodeRef = useRef<HTMLSpanElement>(null);
-  const inView = useInView(nodeRef, { 
-    once: VIEWPORT_CONFIG.once, 
-    amount: VIEWPORT_CONFIG.amount, 
-    margin: VIEWPORT_CONFIG.margin as any 
+  const inView = useInView(nodeRef, {
+    once: VIEWPORT_CONFIG.once,
+    amount: VIEWPORT_CONFIG.amount,
+    margin: VIEWPORT_CONFIG.margin as any
   });
 
   useEffect(() => {

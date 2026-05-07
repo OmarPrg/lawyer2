@@ -4,6 +4,7 @@ import { services } from '@/lib/services-data';
 import { CaseStudyDialog } from '@/components/CaseStudyDialog';
 import { SlideUp, FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animations';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function generateStaticParams() {
   return services.map((service) => ({
@@ -23,11 +24,24 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
     <main className="min-h-screen bg-[#131313] text-white">
         
         {/* Hero Section */}
-        <section className="relative pt-40 pb-20 overflow-hidden bg-[#131313]">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#25395e] to-[#131313] opacity-100" />
-          <div className="absolute top-0 right-1/4 w-[300px] h-[300px] bg-[#4870bb] blur-[150px] opacity-20" />
+        <section className="relative pt-44 pb-32 bg-[#131313] overflow-hidden">
+          {/* Background Image Layer */}
+          <div className="absolute inset-0 z-0">
+            <Image 
+              src="/assets/heroBackground.webp.webp" 
+              alt="Background" 
+              fill 
+              className="object-cover opacity-60 grayscale brightness-[0.5]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#131313]/80 via-[#131313]/40 to-[#131313]/80 z-10" />
+            <div className="absolute inset-0 bg-[#25395e]/10 z-10" />
+          </div>
+
+          {/* Decorative Background Elements */}
+          <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#4870bb] blur-[180px] opacity-15 z-10" />
+          <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-10" />
           
-          <div className="container mx-auto px-6 lg:px-12 relative z-10 text-white">
+          <div className="container mx-auto px-6 lg:px-12 relative z-20 text-white">
             <FadeIn>
               <nav className="flex items-center gap-2 text-sm text-[#a5a5aa] mb-8" dir="rtl">
                 <Link href="/" className="hover:text-white transition-colors">الرئيسية</Link>
@@ -62,12 +76,17 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <SlideUp className="order-2 lg:order-1">
                 <div className="relative aspect-square max-w-md mx-auto">
-                   <div className="absolute inset-0 border-2 border-[#4870bb]/10 rounded-3xl -rotate-6 translate-x-4 translate-y-4" />
-                   <div className="absolute inset-0 bg-gradient-to-tr from-[#25395e] to-[#4870bb] rounded-3xl shadow-2xl flex items-center justify-center p-8">
-                     <span className="material-symbols-outlined text-9xl text-white/20 absolute bottom-4 right-4">{service.icon}</span>
-                     <p className="text-2xl font-display font-bold text-center leading-relaxed italic opacity-90 text-white">
-                       "نؤمن بأن العدالة ليست مجرد هدف، بل هي الطريق الذي نسلكه في كل قضية."
-                     </p>
+                   {/* Single Decorative Organic Outline (Gold-ish) */}
+                   <div className="absolute inset-0 border border-[#c5a35d]/40 rounded-[120px_40px_120px_40px] rotate-6 scale-105" />
+                   
+                   {/* Main Image with Blob Shape */}
+                   <div className="absolute inset-0 rounded-[120px_40px_120px_40px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.12)] bg-[#131313] border-[6px] border-white">
+                     <Image 
+                        src="/assets/Ahmed Shaban .webp" 
+                        alt="Ahmed Shaban" 
+                        fill 
+                        className="object-cover object-top"
+                     />
                    </div>
                 </div>
               </SlideUp>
@@ -99,7 +118,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="flex flex-col items-center text-center mb-16">
               <span className="inline-block py-1.5 px-6 rounded-full bg-[#4870bb]/10 text-[#4870bb] border border-[#4870bb]/20 font-primary text-sm tracking-widest uppercase mb-4 shadow-sm">النتائج تتحدث</span>
-              <h2 className="text-4xl font-display font-extrabold text-[#1c0305]">قضايا سابقة مماثلة (المقالات)</h2>
+              <h2 className="text-4xl font-display font-extrabold text-[#1c0305]">قضايا سابقة مماثلة</h2>
               <p className="text-[#616161] mt-4 max-w-2xl font-primary text-lg">
                 استعرض بعض القضايا التي حققنا فيها نتائج استثنائية وبنينا من خلالها ثقة عملائنا.
               </p>
